@@ -1,0 +1,44 @@
+{
+  "name": "@cadit-app/manifold-chess-test",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/main.js",
+      "types": "./dist/main.d.ts"
+    },
+    "./*": {
+      "import": "./dist/*.js",
+      "types": "./dist/*.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "bash -c 'output=$(tsc --noCheck 2>&1); echo \"$output\"; echo \"$output\" | grep -v \"error TS2742\" | grep -q \"error TS\" && exit 1 || exit 0'",
+    "build:3mf": "manifold-cad main.ts output.3mf",
+    "build:glb": "manifold-cad main.ts output.glb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CADit-app/manifold-chess-test"
+  },
+  "homepage": "https://github.com/CADit-app/manifold-chess-test#readme",
+  "bugs": {
+    "url": "https://github.com/CADit-app/manifold-chess-test/issues"
+  },
+  "dependencies": {
+    "dxf-parser": "^1.1.2",
+    "@cadit-app/script-params": "^0.5.3"
+  },
+  "peerDependencies": {
+    "manifold-3d": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "entryPoint": "main.ts",
+  "name": "manifold-chess-test",
+  "images": [
+    {
+      "path": "images/scad_split_knight2.png",
+      "isPrimary": true
+    }
+  ],
+  "metadata": {
+    "createdAt": "2026-01-21T14:36:08.786Z",
+    "createdWith": "cadit-web",
+    "designId": "OhMHcHQLlFbn59c"
+  }
+}
