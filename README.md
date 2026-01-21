@@ -1,6 +1,6 @@
 # manifold-chess-test
 
-![manifold-chess-test](./images/scad_split_knight2.png)
+![manifold-chess-test](./images/thumbnail-j-WHuoMa.png)
 
 A code-based 3D model.
 

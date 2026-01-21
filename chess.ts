@@ -314,6 +314,12 @@ export function makePiece(id: PieceId): Manifold {
 }
 
 export function makeAllPieces(): Manifold[] {
-  return PIECE_IDS.map((id) => makePiece(id));
+  const spacing = 50;
+  const rowLength = 5;
+  return PIECE_IDS.map((id, index) => {
+    const row = Math.floor(index / rowLength);
+    const col = index % rowLength;
+    return makePiece(id).translate([col * spacing, -row * spacing, 0]);
+  });
 }
 

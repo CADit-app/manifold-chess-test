@@ -1,6 +1,6 @@
 {
   "name": "@cadit-app/manifold-chess-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -8,6 +8,11 @@
     ".": {
       "import": "./dist/main.js",
       "types": "./dist/main.d.ts"
+    },
+    "./main": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.js"
     },
     "./*": {
       "import": "./dist/*.js",
